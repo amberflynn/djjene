@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :events
+  end
 
   resources :events
 
   root 'events#index'
 
   get 'pages/about'
+
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
